@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student: 1
+  exam: 1
+  qualif: 1
+
+two:
+  student: 1
+  exam: 1
+  qualif: 1
