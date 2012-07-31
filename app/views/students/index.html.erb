@@ -1,2 +1,29 @@
-<h1> <%= @student %> </h1>
+<h1>Listing Students</h1>
+<%= link_to 'New Student', new_student_path %>
+<table class="table table-striped">
+  <tr>
+    <th>Identification</th>
+    <th>Name</th>
+    <th>age</th>
+    <th>program</th>
+    <th>address</th>
+    <th>cellphone</th>
+    <th>Edit</th>
+  </tr>
+
+<%@student.each do |student|%>
+  <tr>
+    <td><%= student.identification%></td>
+    <td><%= student.name%></td>
+    <td><%= student.age%></td>
+    <td><%= student.progam%></td>
+    <td><%= student.addres%></td>
+    <td><%= student.cellphone%></td>
+    <td><%= link_to 'Edit Student', edit_student_path(student)%> |
+    	<%=link_to 'Delete Student', student_path(student), :method => "delete", :confirm => "Are you sure?"%>
+    </td>    
+  </tr>
+<% end %>
+</table>
+
 

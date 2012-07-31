@@ -1,0 +1,28 @@
+<h1>New Student</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@student) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :identification %>
+      <%= f.text_field :identification %>
+
+      <%= f.label :age %>
+      <%= f.text_field :age %>
+
+      <%= f.label :addres %>
+      <%= f.text_field :addres%>
+      
+      <%= f.label :cellphone %>
+      <%= f.text_field :cellphone%>
+      
+      <%= f.label :progam %>
+      <%= f.text_field :progam%>
+
+      <%= f.submit "Create Student", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

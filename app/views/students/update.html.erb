@@ -1,2 +1,15 @@
-<h1>Students#update</h1>
-<p>Find me in app/views/students/update.html.erb</p>
+<h1>Info of <%= @student.name.capitalize%></h1>
+<div class="row">
+	<div class="span6 offset3">
+		<form class="well">
+			<label>Identificacion: <%= @student.identification%></label>			
+			<label>Age: <%= @student.age%></label>
+			<label>Program: <%= @student.progam%></label>
+			<label>Address: <%= @student.addres%></label>
+			<label>Cellphone: <%= @student.cellphone%></label>			
+			<button type="back" class="btn" action ="/students">
+				Back
+			</button>
+		</form>
+	</div>
+</div>

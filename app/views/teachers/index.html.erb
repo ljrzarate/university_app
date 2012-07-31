@@ -1,0 +1,28 @@
+<h1>Listing Teacher</h1>
+<%= link_to 'New Teacher', new_teacher_path %>
+<table class="table table-striped">
+  <tr>
+    <th>Identification</th>
+    <th>Name</th>
+    <th>profession</th>
+    <th>email</th>
+    <th>area</th>
+    <th>cellphone</th>
+    <th>address</th>
+    <th>Edit</th>
+  </tr>
+
+<%@teacher.each do |teacher|%>
+  <tr>
+    <td><%= teacher.identification%></td>
+    <td><%= teacher.name%></td>
+    <td><%= teacher.age%></td>
+    <td><%= teacher.progam%></td>
+    <td><%= teacher.addres%></td>
+    <td><%= teacher.cellphone%></td>
+    <td><%= link_to 'Edit Teacher', edit_teacher_path(student)%> |
+    	<%=link_to 'Delete Student', teacher_path(teacher), :method => "delete", :confirm => "Are you sure?"%>
+    </td>    
+  </tr>
+<% end %>
+</table>

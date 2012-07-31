@@ -1,6 +1,23 @@
-UniversityApp::Application.routes.draw do
-	
+UniversityApp::Application.routes.draw do  
+=begin
+  get "teachers/index"
+
+  get "teachers/new"
+
+  get "teachers/create"
+
+  get "teachers/show"
+
+  get "teachers/edit"
+
+  get "teachers/update"
+
+  get "teachers/destroy"
+=end
+	root :to => 'university#index' 
   resources :students
+  resources :teachers
+  
 	
 =begin  get "students/show"	
   
