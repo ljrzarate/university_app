@@ -1,0 +1,17 @@
+<%if @student != nil
+	 instance = @student
+	else
+		instance = @teacher
+	end %>
+<% if instance.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      The form contains <%= pluralize(instance.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% instance.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

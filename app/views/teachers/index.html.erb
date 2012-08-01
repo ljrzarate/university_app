@@ -16,12 +16,13 @@
   <tr>
     <td><%= teacher.identification%></td>
     <td><%= teacher.name%></td>
-    <td><%= teacher.age%></td>
-    <td><%= teacher.progam%></td>
-    <td><%= teacher.addres%></td>
+    <td><%= teacher.profession%></td>
+    <td><%= teacher.email%></td>
+    <td><%= teacher.area_teacher%></td>
     <td><%= teacher.cellphone%></td>
-    <td><%= link_to 'Edit Teacher', edit_teacher_path(student)%> |
-    	<%=link_to 'Delete Student', teacher_path(teacher), :method => "delete", :confirm => "Are you sure?"%>
+    <td><%= teacher.address%></td>    
+    <td><%= link_to 'Edit Teacher', edit_teacher_path(teacher)%> |
+    	<%=link_to 'Delete Teacher', teacher_path(teacher), :method => "delete", :confirm => "Are you sure?"%>
     </td>    
   </tr>
 <% end %>

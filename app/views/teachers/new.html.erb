@@ -2,7 +2,9 @@
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(@teacher) do |f| %>
-
+		
+		<%= render 'shared/error_messages' %>
+		
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 
@@ -16,13 +18,14 @@
 		<%= f.text_field :email %>
 
 		<%= f.label :addres %>
-		<%= f.text_field :addres%>
+		<%= f.text_field :address%>
 
 		<%= f.label :cellphone %>
 		<%= f.text_field :cellphone%>
 
-		<%= f.label :area_teacher %>
-		<%= f.text_field :area_teacher%>
+		<%= f.label :area_teacher %>		
+		<%= select_tag(:area_teacher, options_for_select([['---'],['Mathematics'], ['Software'], ['Networking']])) %>
+				
 
 		<%= f.submit "Create Teacher", class: "btn btn-large btn-primary" %>
 		<% end %>

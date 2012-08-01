@@ -14,7 +14,7 @@ class TeachersController < ApplicationController
       flash[:success] = "added teacher successfully"
       @teacher = Teacher.all
       render 'index'      
-    else     
+    else
       render 'new'
     end
   end
@@ -23,9 +23,18 @@ class TeachersController < ApplicationController
   end
 
   def edit
+    @teacher = Teacher.find(params[:id])
   end
 
   def update
+    @teacher = Teacher.find(params[:id])
+    if @teacher.update_attributes(params[:teacher])
+      flash[:notice] = "updated #{@teacher.name} successfully"  
+      redirect_to teacher_path
+    else
+      flash[:error] = "can't update #{@teacher.name}"
+      redirect_to edit_teacher_path
+    end
   end
 
   def destroy

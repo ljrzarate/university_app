@@ -1,2 +1,33 @@
-<h1>Teachers#edit</h1>
-<p>Find me in app/views/teachers/edit.html.erb</p>
+<h1>New Teacher</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@teacher) do |f| %>
+		
+		<%= render 'shared/error_messages' %>
+		
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+
+		<%= f.label :identification %>
+		<%= f.text_field :identification %>
+
+		<%= f.label :profession %>
+		<%= f.text_field :profession %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :addres %>
+		<%= f.text_field :address%>
+
+		<%= f.label :cellphone %>
+		<%= f.text_field :cellphone%>
+
+		<%= f.label :area_teacher %>		
+		<%= select_tag(:area_teacher, options_for_select([['---'],['Mathematics'], ['Software'], ['Networking']])) %>
+				
+
+		<%= f.submit "Create Teacher", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>
